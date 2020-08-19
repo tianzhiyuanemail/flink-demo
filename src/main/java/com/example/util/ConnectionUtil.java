@@ -1,5 +1,10 @@
 package com.example.util;
 
+import org.apache.flink.streaming.api.windowing.time.Time;
+
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.Random;
 
 public class ConnectionUtil {
@@ -15,8 +20,14 @@ public class ConnectionUtil {
 
     }
 
-    public static void main(String[] args) {
-        System.out.println(get());
+    public static void main(String[] args) throws ParseException {
+
+        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+
+        String format = simpleDateFormat.format(new Date(1595642520000L));
+
+        System.out.println(format);
+
     }
 
 

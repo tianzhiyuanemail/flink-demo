@@ -1,16 +1,15 @@
-package com.example.datastream;
+package com.example.sink;
 
 import com.example.pojo.Student;
 import org.apache.flink.api.common.functions.MapFunction;
-import org.apache.flink.streaming.api.datastream.DataStreamSink;
 import org.apache.flink.streaming.api.datastream.DataStreamSource;
 import org.apache.flink.streaming.api.datastream.SingleOutputStreamOperator;
 import org.apache.flink.streaming.api.environment.StreamExecutionEnvironment;
 
-public class CustomSinkToMysql {
+public class FileSystemSinkApp {
 
 
-    public static void main(String[] args) throws Exception {
+    public static void main(String[] args) {
         StreamExecutionEnvironment executionEnvironment = StreamExecutionEnvironment.getExecutionEnvironment();
 
 
@@ -29,11 +28,8 @@ public class CustomSinkToMysql {
             }
         });
 
-        DataStreamSink<Student> studentDataStreamSink = out.addSink(new SinkToMysql());
 
-        executionEnvironment.execute("abcd");
+
 
     }
-
-
 }

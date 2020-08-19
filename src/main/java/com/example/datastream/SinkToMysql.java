@@ -1,5 +1,6 @@
 package com.example.datastream;
 
+import com.example.pojo.Student;
 import org.apache.flink.configuration.Configuration;
 import org.apache.flink.streaming.api.functions.sink.RichSinkFunction;
 

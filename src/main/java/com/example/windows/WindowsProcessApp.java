@@ -1,4 +1,4 @@
-package com.example.win;
+package com.example.windows;
 
 import org.apache.flink.api.common.functions.FlatMapFunction;
 import org.apache.flink.api.java.tuple.Tuple;
